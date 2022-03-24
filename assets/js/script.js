@@ -1,5 +1,6 @@
 // global variables
 cityInputEl = document.querySelector("#city-input");
+// eventsContainerEl = document.querySelector("#)
 
 // form handler function: needs to prevent default and run getEvents and getBreweries
 var formSubmitHandler = function (event) {
