@@ -6,31 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Tourism App</title>
-  </head> <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href=“#Events”>Events</a></li>
+        <li><a href=“#Breweries”>Breweries</a></li>
+        <li><a href=“#Recent-Searches”>Recent Searches</a></li>
+        <li><a href=“#Contacts”>Contacts</a></li>
+      </ul>
+      </nav> 
+  </header>
   <body>
+    <scetion class = "hero">
+      <form id=“user-form” class=“card-body”>
+        <label class=“form-label” for=“city”></label>
+        <input
+          name=“city”
+          id=“city-input”
+          type=“text”
+          autofocus=“true”
+          class=“form-control”
+          placeholder=“City”
+        /><br />
+        <button
+          type=“submit”
+          class=“btn btn-dark btn-block p-2"
+          id=“button”
+        >
+          Search
+        </button>
+      </form>
+    </scetion>
     <section>
-      <h1></h1>
-      <p>
-
-      </p>
+      <h1>Events</h1>
+      <p></p>
   </section>
   <section>
-      <h1></h1>
+      <h1>Breweries</h1>
       <p>
         Writing to test
       </p>
   </section>
   <section>
-      <h1></h1>
+      <h1>Recent Searches</h1>
       <p>
 
       </p>
   </section>
+  <section>
+    <h1>Contacts</h1>
+    <p><a href=“mailto:bkallen90@gmail.com”>Email us for more information!</a></p>
+</section>
   <aside>
       <section>
           <h1>
               <p>
-
+                hello!
               </p>
           </h1>
       </section>
@@ -44,4 +78,10 @@
   </aside>
     <script src="./assets/js/script.js"></script>
   </body>
+  <footer>
+    <nav>
+      Made by the three Muskuteers ⚔️
+      <a href=“#Back-to-top”>Back to top</a>
+    </nav>
+  </footer>
 </html>
