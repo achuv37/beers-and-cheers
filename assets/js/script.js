@@ -169,3 +169,4 @@ submitButtonEl.addEventListener("click", formSubmitHandler);
 //     getBreweries(city);
 //     getEvents(city);
 //   });
+// comments.
