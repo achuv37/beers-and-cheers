@@ -114,7 +114,7 @@ var displayEvents = function (data) {
     eventCardPriceMax.setAttribute("class", "card-content");
     eventCardUrl.setAttribute("class", "card-content");
     eventCardVenue.setAttribute("class", "card-content");
-    eventCardImg.setAttribute("class", "card-image");
+    eventCardImg.setAttribute("class", "card-image image is-128x128 ml-2");
     eventCardImg.setAttribute("src", data._embedded.events[i].images[i].url)
 
     eventCardStartDate.textContent = `Start date: ${data._embedded.events[i].dates.start.localDate}`;
