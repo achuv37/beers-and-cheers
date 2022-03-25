@@ -4,90 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Tourism App</title>
+    <title>Beers and Cheers</title>
   </head>
-  
-  <header>
+
+  <header class="navbar hero-background-image" role="navigation" aria-label="main navigation">
+    <h1 class="navbar-brand has-text-grey-darker">
+      <a id="top">Beers and Cheers</a>
+    </h1>
     <nav>
-      <ul>
+      <ul class="navbar-start">
+        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#events">Events</a></li>
+        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#breweries">Breweries</a></li>
         <li>
-          <a href=“#Events”>Events</a></li>
-        <li><a href=“#Breweries”>Breweries</a></li>
-        <li><a href=“#Recent-Searches”>Recent Searches</a></li>
-        <li><a href=“#Contacts”>Contacts</a></li>
+          <a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#recent-searches">Recent Searches</a>
+        </li>
+        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#contacts">Contact</a></li>
       </ul>
-      </nav> 
+    </nav>
   </header>
   <body>
-    <scetion class = "hero">
-      <form id=“user-form” class=“card-body”>
-        <label class=“form-label” for=“city”></label>
-        <input
-          name=“city”
-          id=“city-input”
-          type=“text”
-          autofocus=“true”
-          class=“form-control”
-          placeholder=“City”
-        /><br />
-        <button
-          type=“submit”
-          class=“btn btn-dark btn-block p-2"
-          id=“button”
-        >
-          Search
-        </button>
-      </form>
-    </scetion>
-    <section>
-      <h1>Events</h1>
-      <p></p>
-  </section>
-  <section>
-      <h1>Breweries</h1>
-      <p>
-        Writing to test
-      </p>
-  </section>
-  <section>
-      <h1>Recent Searches</h1>
-      <p>
+    <section class="hero is-dark hero-background-image">
+      <div class="hero-body columns is-3">
+        <div class="column">
+          <div class="card p-4">
+            <h2 class="card-header-title is-size-3">Let's make some memories.</h2>
+            <div class="card-content">Looking for a concert, play, or game in your city and then a cool brewery to kick back at after? You've come to the right place.  </div></div>
+      </div>
+        <div class="column">
+          <div class="card p-4">
+            <form id="“user-form”" class="“card-content”">
+              <input
+                id="“city-input”"
+                class="input is-info"
+                type="text"
+                placeholder="City"
+              /><br />
+              <button type="submit" class="button is-normal" id="“button”">
+                Search
+              </button>
+            </form>
+          </div>
+        </div> 
+    </section>
 
-      </p>
-  </section>
-  <section>
-    <h1>Contacts</h1>
-    <p><a href=“mailto:bkallen90@gmail.com”>Email us for more information!</a></p>
-</section>
-  <aside>
-      <section>
-          <h1>
-              <p>
-                hello!
-              </p>
-          </h1>
+    <main>
+      <div class="columns is-3">
+        <section id="events" class="column has-text-centered">
+          <h1 class="is-size-2">Events</h1>
+          <p></p>
+        </section>
+        <section id="breweries" class="column has-text-centered">
+          <h1 class="is-size-2">Breweries</h1>
+          <p>Writing to test</p>
+        </section>
+      </div>
+      <section id="recent-searches" class="has-text-centered">
+        <h1 class="is-size-4">Recent Searches</h1>
+        <p></p>
       </section>
-      <section>
-          <h1>
-              <p>
-                  
-              </p>
-          </h1>
-      </section>
-  </aside>
-    <script src="./assets/js/script.js"></script>
-  </body>
-  <footer>
-    <nav>
-      <h2>Made by the three Muskuteers ⚔️</h2>
-      
+    </main>
+    <footer class="has-text-centered">
+      <a href=“#top”>Back to top</a><br />
+      <a href=“mailto:bkallen90@gmail.com”
+          >Email us</a
+        >
+      <h2>Made by the Three Musketeers ⚔️</h2>
+
       <div>
-        <a href=“#Back-to-top”>Back to top</a><br />
-        
         &copy; 2022 Tourist-app, Inc.
       </div>
-    </nav>
-  </footer>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
