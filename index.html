@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourism-app</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Beers and Cheers</title>
+  </head>
+
+  <header class="navbar hero-background-image" role="navigation" aria-label="main navigation">
+    <h1 class="navbar-brand has-text-grey-darker">
+      <a id="top">Beers and Cheers</a>
+    </h1>
+    <nav>
+      <ul class="navbar-start">
+        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#events">Events</a></li>
+        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#breweries">Breweries</a></li>
+        <li>
+          <a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#recent-searches">Recent Searches</a>
+        </li>
+        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#contacts">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <section class="hero is-dark hero-background-image">
+      <div class="hero-body columns is-3">
+        <div class="column">
+          <div class="card p-4">
+            <h2 class="card-header-title is-size-3">Let's make some memories.</h2>
+            <div class="card-content">Are you a beer afficionado looking for a concert, play, or game in your city and then a cool brewery to kick back at after? You've come to the right place. Let us do the hard work for you. </div></div>
+      </div>
+        <div class="column">
+          <div class="card p-4">
+            <div class="card-content">Search for your city here to find the hottest events and the coolest breweries in your area so you can kick back and relax. </div>
+            <form id="“user-form” class="card-content">
+              <input
+                id="city-input"
+                class="input is-info"
+                type="text"
+                placeholder="City"
+              /><br />
+              <button type="submit" class="button is-normal" id="button">
+                Search
+              </button>
+            </form>
+          </div>
+        </div> 
+    </section>
+
+    <main>
+      <div class="columns is-3">
+        <div class="column has-text-centered">
+        <h1 class="is-size-2">Events</h1>
+        <section id="events">
+        </section>
+      </div>
+        <div class="column has-text-centered">
+          <h1 class="is-size-2">Breweries</h1>
+        <section id="breweries">
+        </section>
+      </div>
+      </div>
+      <section id="recent-searches" class="has-text-centered">
+        <h1 class="is-size-4">Recent Searches</h1>
+        <p></p>
+      </section>
+    </main>
+    <footer class="has-text-centered">
+      <a href=“#top”>Back to top</a><br />
+      <a href=“mailto:bkallen90@gmail.com”
+          >Email us</a
+        >
+      <h2>Made by the Three Musketeers ⚔️</h2>
+
+      <div>
+        &copy; 2022 Tourist-app, Inc.
+      </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
