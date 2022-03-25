@@ -33,18 +33,19 @@
         <div class="column">
           <div class="card p-4">
             <h2 class="card-header-title is-size-3">Let's make some memories.</h2>
-            <div class="card-content">Looking for a concert, play, or game in your city and then a cool brewery to kick back at after? You've come to the right place.  </div></div>
+            <div class="card-content">Are you a beer afficionado looking for a concert, play, or game in your city and then a cool brewery to kick back at after? You've come to the right place. Let us do the hard work for you. </div></div>
       </div>
         <div class="column">
           <div class="card p-4">
-            <form id="“user-form”" class="“card-content”">
+            <div class="card-content">Search for your city here to find the hottest events and the coolest breweries in your area so you can kick back and relax. </div>
+            <form id="“user-form” class="card-content">
               <input
-                id="“city-input”"
+                id="city-input"
                 class="input is-info"
                 type="text"
                 placeholder="City"
               /><br />
-              <button type="submit" class="button is-normal" id="“button”">
+              <button type="submit" class="button is-normal" id="button">
                 Search
               </button>
             </form>
@@ -54,14 +55,16 @@
 
     <main>
       <div class="columns is-3">
-        <section id="events" class="column has-text-centered">
-          <h1 class="is-size-2">Events</h1>
-          <p></p>
+        <div class="column has-text-centered">
+        <h1 class="is-size-2">Events</h1>
+        <section id="events">
         </section>
-        <section id="breweries" class="column has-text-centered">
+      </div>
+        <div class="column has-text-centered">
           <h1 class="is-size-2">Breweries</h1>
-          <p>Writing to test</p>
+        <section id="breweries">
         </section>
+      </div>
       </div>
       <section id="recent-searches" class="has-text-centered">
         <h1 class="is-size-4">Recent Searches</h1>

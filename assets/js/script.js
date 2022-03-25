@@ -1,6 +1,8 @@
 // global variables
-cityInputEl = document.querySelector("#city-input");
-// eventsContainerEl = document.querySelector("#)
+var cityInputEl = document.querySelector("#city-input");
+var eventsContainerEl = document.querySelector("#events");
+var breweriesContainerEl = document.querySelector("#breweries");
+var submitButtonEl = document.querySelector("#button");
 
 // form handler function: needs to prevent default and run getEvents and getBreweries
 var formSubmitHandler = function (event) {
@@ -20,7 +22,7 @@ var formSubmitHandler = function (event) {
 
 // getEvents function: return info from Ticketmaster
 var getEvents = function (city) {
-  var apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=4328UK6uESMfw57GtWI99vk5Gb15zK1Q&city=${city}`;
+  var apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?size=5&apikey=4328UK6uESMfw57GtWI99vk5Gb15zK1Q&city=${city}`;
 
   fetch(apiUrl)
     .then(function (response) {
@@ -65,24 +67,77 @@ getBreweries("Durham");
 // displayBreweries: displays brewery information to the page
 var displayBreweries = function (data) {
   for (var i = 0; i < 5; i++) {
-    data[i].name;
-    data[i].street;
-    data[i].postal_code;
+    console.log("working");
+
+    var breweryCard = document.createElement("div");
+    breweryCard.setAttribute("class", "card");
+    var breweryCardTitle = document.createElement("h2");
+    breweryCardTitle.setAttribute("class", "card-header-title");
+    breweryCardTitle.textContent = data[i].name;
+
+    var breweryCardStreet = document.createElement("p");
+    var breweryCardPostalCode = document.createElement("p");
+
+    breweryCardStreet.textContent = `Address: ${data[i].street}`;
+    breweryCardPostalCode.textContent = data[i].postal_code;
+    breweryCardStreet.setAttribute("class", "card-content");
+    breweryCardPostalCode.setAttribute("class", "card-content");
+
+    breweryCard.appendChild(breweryCardTitle);
+    breweryCard.appendChild(breweryCardStreet);
+    breweryCard.appendChild(breweryCardPostalCode);
+    breweriesContainerEl.appendChild(breweryCard);
   }
 };
 
 // displayEvents: displays event information to the page
 var displayEvents = function (data) {
-  for (var i = 0; i < 5; i++) {
-    data._embedded.events[i].name;
-    data._embedded.events[i].dates.start.localDate;
-    data._embedded.events[i].dates.start.localTime;
-    data._embedded.events[i].priceRanges[i].min;
-    data._embedded.events[i].priceRanges[i].max;
-    data._embedded.events[i].images[0].url;
+  eventsContainerEl.textContent = "";
+
+  for (var i = 0; i < data._embedded.events.length; i++) {
+    console.log("working");
+
+    var eventCard = document.createElement("div");
+    eventCard.setAttribute("class", "card");
+    var eventCardTitle = document.createElement("h2");
+    eventCardTitle.setAttribute("class", "card-header-title");
+    eventCardTitle.textContent = data._embedded.events[i].name;
+
+    var eventCardStartDate = document.createElement("p");
+    var eventCardStartTime = document.createElement("p");
+    var eventCardPriceMin = document.createElement("p");
+    var eventCardPriceMax = document.createElement("p");
+    var eventCardUrl = document.createElement("p");
+    var eventCardVenue = document.createElement("p");
+    var eventCardImg = document.createElement("img");
+
+    eventCardStartDate.setAttribute("class", "card-content");
+    eventCardStartTime.setAttribute("class", "card-content");
+    eventCardPriceMin.setAttribute("class", "card-content");
+    eventCardPriceMax.setAttribute("class", "card-content");
+    eventCardUrl.setAttribute("class", "card-content");
+    eventCardVenue.setAttribute("class", "card-content");
+    eventCardImg.setAttribute("class", "card-image");
+
+    eventCardStartDate.textContent = `Start date: ${data._embedded.events[i].dates.start.localDate}`;
+    eventCardStartTime.textContent = `Start time: ${data._embedded.events[i].dates.start.localTime}`;
+    eventCardPriceMin.textContent = `Lowest price: ${data._embedded.events[i].priceRanges[0].min}`;
+    eventCardPriceMax.textContent = `Highest price: ${data._embedded.events[i].priceRanges[0].max}`;
+    eventCardImg.textContent = data._embedded.events[i].images[i].url;
+
     //need to look at image ratio information for embedding in card
-    data._embedded.events[i].url;
-    data._embedded.events[i]._embedded.venues[0];
+    eventCardUrl.textContent = `URL: ${data._embedded.events[i].url}`;
+    eventCardVenue.textContent = `Venue: ${data._embedded.events[i]._embedded.venues[0].name}`;
+
+    eventCard.appendChild(eventCardTitle);
+    eventCard.appendChild(eventCardImg);
+    eventCard.appendChild(eventCardStartDate);
+    eventCard.appendChild(eventCardStartTime);
+    eventCard.appendChild(eventCardPriceMin);
+    eventCard.appendChild(eventCardPriceMax);
+    eventCard.appendChild(eventCardVenue);
+    eventCard.appendChild(eventCardUrl);
+    eventsContainerEl.appendChild(eventCard);
   }
 };
 
@@ -107,11 +162,11 @@ var loadCities = function () {
 submitButtonEl.addEventListener("click", formSubmitHandler);
 
 //event listener for search history buttons
-document
-  .querySelector("#search-history")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    var city = event.target.dataset.search;
-    getBreweries(city);
-    getEvents(city);
-  });
+// document
+//   .querySelector("#search-history")
+//   .addEventListener("click", function (event) {
+//     event.preventDefault();
+//     var city = event.target.dataset.search;
+//     getBreweries(city);
+//     getEvents(city);
+//   });
