@@ -40,8 +40,6 @@ var getEvents = function (city) {
     });
 };
 
-getEvents("Durham");
-
 // getBreweries: return info from Open Breweries
 var getBreweries = function (city) {
   var apiUrl = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
@@ -62,10 +60,9 @@ var getBreweries = function (city) {
     });
 };
 
-getBreweries("Durham");
-
 // displayBreweries: displays brewery information to the page
 var displayBreweries = function (data) {
+  breweriesContainerEl.textContent = "";
   for (var i = 0; i < 5; i++) {
     console.log("working");
 
