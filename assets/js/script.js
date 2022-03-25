@@ -115,12 +115,13 @@ var displayEvents = function (data) {
     eventCardUrl.setAttribute("class", "card-content");
     eventCardVenue.setAttribute("class", "card-content");
     eventCardImg.setAttribute("class", "card-image");
+    eventCardImg.setAttribute("src", data._embedded.events[i].images[i].url)
 
     eventCardStartDate.textContent = `Start date: ${data._embedded.events[i].dates.start.localDate}`;
     eventCardStartTime.textContent = `Start time: ${data._embedded.events[i].dates.start.localTime}`;
     eventCardPriceMin.textContent = `Lowest price: ${data._embedded.events[i].priceRanges[0].min}`;
     eventCardPriceMax.textContent = `Highest price: ${data._embedded.events[i].priceRanges[0].max}`;
-    eventCardImg.textContent = data._embedded.events[i].images[i].url;
+    //eventCardImg.textContent = data._embedded.events[i].images[i].url;
 
     //need to look at image ratio information for embedding in card
     eventCardUrl.textContent = `URL: ${data._embedded.events[i].url}`;
