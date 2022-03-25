@@ -125,7 +125,7 @@ var displayEvents = function (data) {
     eventCardImg.textContent = data._embedded.events[i].images[i].url;
 
     //need to look at image ratio information for embedding in card
-    eventCardUrl.textContent = `URL: ${data._embedded.events[i].url}`;
+    eventCardUrl.textContent = `For more details: ${data._embedded.events[i].url}`;
     eventCardVenue.textContent = `Venue: ${data._embedded.events[i]._embedded.venues[0].name}`;
 
     eventCard.appendChild(eventCardTitle);
