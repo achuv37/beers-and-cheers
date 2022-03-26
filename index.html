@@ -37,31 +37,31 @@
   </head>
 
   <header class="navbar hero-background-image" role="navigation" aria-label="main navigation">
-    <h1 class="navbar-brand has-text-grey-darker">
+    <h1 class="navbar-brand has-text-grey-darker is-size-2">
       <a id="top">Beers and Cheers</a>
     </h1>
     <nav>
       <ul class="navbar-start">
-        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#events">Events</a></li>
-        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#breweries">Breweries</a></li>
+        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold is-size-3-mobile is-size-3-tablet" href="#events">Events</a></li>
+        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold is-size-3-mobile is-size-3-tablet" href="#breweries">Breweries</a></li>
         <li>
-          <a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#recent-searches">Recent Searches</a>
+          <a class="navbar-item has-text-grey-darker has-text-weight-semibold is-size-3-mobile is-size-3-tablet" href="#recent-searches">Recent Searches</a>
         </li>
-        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold" href="#contacts">Contact</a></li>
+        <li><a class="navbar-item has-text-grey-darker has-text-weight-semibold is-size-3-mobile is-size-3-tablet" href="#contacts">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <body>
-    <section class="hero is-dark hero-background-image">
+  <body class="has-background-grey-lighter">
+    <section class="hero is-medium is-dark hero-background-image">
       <div class="hero-body columns is-3">
         <div class="column">
           <div class="card p-4">
-            <h2 class="card-header-title is-size-3">Let's make some memories.</h2>
-            <div class="card-content">Are you a beer afficionado looking for a concert, play, or game in your city and then a cool brewery to kick back at after? You've come to the right place. Let us do the hard work for you. </div></div>
+            <h2 class="card-header-title is-size-3 is-italic">Let's make some memories.</h2>
+            <div class="card-content is-size-4">Are you a beer afficionado looking for a concert, play, or game in your city and then a cool brewery to kick back at after? You've come to the right place. Let us do the hard work for you. </div></div>
       </div>
         <div class="column">
           <div class="card p-4">
-            <div class="card-content">Search for your city here to find the hottest events and the coolest breweries in your area so you can kick back and relax. </div>
+            <div class="card-content is-size-4">Search for your city here to find the hottest events and the coolest breweries in your area so you can kick back and relax. </div>
             <form id="“user-form” class="card-content">
               <input
                 id="city-input"
@@ -69,7 +69,7 @@
                 type="text"
                 placeholder="City"
               /><br />
-              <button type="submit" class="button is-normal" id="button">
+              <button type="submit" class="button is-link is-outlined is-rounded" id="button">
                 Search
               </button>
             </form>
@@ -80,7 +80,7 @@
     <main>
       <div class="columns is-3">
         <div class="column has-text-centered">
-        <h1 class="is-size-2">Events</h1>
+        <h1 class="is-size-2 ">Events</h1>
         <section id="events">
         </section>
       </div>
@@ -90,12 +90,13 @@
         </section>
       </div>
       </div>
-      <section id="recent-searches" class="has-text-centered">
-        <h1 class="is-size-4">Recent Searches</h1>
+      <div class="has-text-centered m-3 pb-2"><h1 class="is-size-2 m-3 p-2">Recent Searches</h1>
+      <section id="recent-searches">
         <p></p>
       </section>
+    </div>
     </main>
-    <footer class="has-text-centered">
+    <footer class="has-text-centered has-background-link-light">
       <a href=“#top”>Back to top</a><br />
       <a href=“mailto:bkallen90@gmail.com”
           >Email us</a>
@@ -109,6 +110,7 @@
         &copy; 2022 Tourist-app, Inc.
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
