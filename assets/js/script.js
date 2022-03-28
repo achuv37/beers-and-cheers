@@ -150,6 +150,7 @@ var displayEvents = function (data) {
 
     //need to look at image ratio information for embedding in card
     eventCardUrl.href = data._embedded.events[i].url;
+    eventCardUrl.target = "_blank";
     eventCardUrl.innerHTML = "For more details click here.";
     eventCardVenue.textContent = `Venue: ${data._embedded.events[i]._embedded.venues[0].name}`;
 
