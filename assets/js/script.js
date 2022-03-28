@@ -9,6 +9,8 @@ var searchHistoryContainerEl = document.querySelector("#recent-searches");
 var formSubmitHandler = function (event) {
   event.preventDefault();
 
+  alert("Events and Breweries displayed below!");
+
   var city = cityInputEl.value.trim();
 
   if (city) {
