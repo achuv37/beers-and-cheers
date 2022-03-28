@@ -54,6 +54,10 @@ header nav ul li a {
   text-decoration: none;
 }
 
+main h1 {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 header {
   padding: 20px 35px;
   display: flex;
@@ -105,6 +109,21 @@ header nav ul li a:hover {
   background-attachment: fixed;
   background-position: 80%;
 }
+
+.beer-background-image {
+  background-image: url(../images/beer-card-image.jpg);
+  background-size: cover;
+  background-position: 0vw;
+  background-position: 80%;
+}
+
+.event-background-image {
+  background-image: url(../images/event-card-image-2.jpg);
+  background-size: cover;
+  background-position: 0vw;
+  background-position: 100%;
+}
+
 #button {
   margin-top: 10px;
 }
@@ -153,9 +172,6 @@ footer {
 .fa-linkedin {
   background: #007bb5;
   color: white;
-}
-main h1 {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /*comments*/

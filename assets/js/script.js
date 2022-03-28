@@ -71,7 +71,10 @@ var displayBreweries = function (data) {
     console.log("working");
 
     var breweryCard = document.createElement("div");
-    breweryCard.setAttribute("class", "card m-3 has-background-link-dark");
+    breweryCard.setAttribute(
+      "class",
+      "card m-3 has-background-link-dark beer-background-image"
+    );
     var breweryCardTitle = document.createElement("h2");
     breweryCardTitle.setAttribute(
       "class",
@@ -105,7 +108,10 @@ var displayEvents = function (data) {
     console.log("working");
 
     var eventCard = document.createElement("div");
-    eventCard.setAttribute("class", "card m-2 has-background-link-dark");
+    eventCard.setAttribute(
+      "class",
+      "card m-2 has-background-link-dark event-background-image"
+    );
     var eventCardTitle = document.createElement("h2");
     eventCardTitle.setAttribute(
       "class",
