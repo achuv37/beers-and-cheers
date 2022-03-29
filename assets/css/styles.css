@@ -113,8 +113,8 @@ header nav ul li a:hover {
 .beer-background-image {
   background-image: url(../images/beer-card-image.jpg);
   background-size: cover;
-  background-position: 0vw;
-  background-position: 80%;
+  /* background-position: 0vw; */
+  background-position: 50%;
 }
 
 .event-background-image {

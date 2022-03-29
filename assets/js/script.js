@@ -78,7 +78,7 @@ var displayBreweries = function (data) {
     var breweryCardTitle = document.createElement("h2");
     breweryCardTitle.setAttribute(
       "class",
-      "has-text-weight-semibold has-text-centered is-size-3 has-text-white"
+      "has-text-weight-semibold has-text-centered is-size-3 has-text-black pt-2"
     );
     breweryCardTitle.textContent = data[i].name;
 
@@ -87,10 +87,10 @@ var displayBreweries = function (data) {
 
     breweryCardStreet.textContent = `Address: ${data[i].street}`;
     breweryCardPostalCode.textContent = data[i].postal_code;
-    breweryCardStreet.setAttribute("class", "is-size-4 m-2 p-2 has-text-white");
+    breweryCardStreet.setAttribute("class", "is-size-4 m-2 p-2 has-text-black");
     breweryCardPostalCode.setAttribute(
       "class",
-      "is-size-4 m-2 p-2 has-text-white"
+      "is-size-4 m-2 p-2 has-text-black"
     );
 
     breweryCard.appendChild(breweryCardTitle);
