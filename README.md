@@ -8,6 +8,6 @@ Built with JavaScript, HTML, Bulma CSS, GitHub, Unsplash, Google Fonts, Open Bre
 
 Link to deployed application:
 
-Link to GitHub repository:
+Link to GitHub repository: https://github.com/beatricekallen/beers-and-cheers
 
 Contributors: Aswathy Ajesh, Beatrice Allen, and Lauren Bryant
