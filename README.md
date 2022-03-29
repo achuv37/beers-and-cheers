@@ -6,7 +6,7 @@ Users will be able to view five events and up to nine breweries in their area. T
 
 Built with JavaScript, HTML, Bulma CSS, GitHub, Unsplash, Google Fonts, Open Brewery API, Ticketmaster API, and Font Awesome.
 
-Link to deployed application:
+Link to deployed application: https://beatricekallen.github.io/beers-and-cheers/
 
 Link to GitHub repository: https://github.com/beatricekallen/beers-and-cheers
 
