@@ -1,7 +1,9 @@
+/* unversal style */
 * {
   text-decoration: none;
 }
 
+/* header styles */
 header {
   padding: 20px 35px;
   display: flex;
@@ -17,7 +19,8 @@ header h1 {
   font-weight: bold;
   font-size: 36px;
   margin: 0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  font-family: "Ubuntu", sans-serif;
 }
 
 header a {
@@ -43,77 +46,29 @@ header nav ul li a {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.hero-background-image {
-  background-image: url(../images/hero-image.jpg);
-  background-size: cover;
-  background-position: 0vw;
-  background-attachment: fixed;
-  background-position: 80%;
-}
-* {
-  text-decoration: none;
-}
-
-main h1 {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-header {
-  padding: 20px 35px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-}
-
-header h1 {
-  font-weight: bold;
-  font-size: 36px;
-  margin: 0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-header a {
-  text-decoration: none;
-}
-
-header nav {
-  margin: 7px 0;
-}
-
-header nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-}
-
-header nav ul li a {
-  padding: 10px 15px;
-  font-weight: lighter;
-  font-size: 1.55vw;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
 header nav ul li a:hover {
   border-radius: 15px;
 }
 
+/* hero section */
 .hero-background-image {
   background-image: url(../images/hero-image.jpg);
   background-size: cover;
   background-position: 0vw;
   background-attachment: fixed;
-  background-position: 80%;
+  object-fit: none;
+  object-position: 500px;
+}
+
+/* main section */
+main h1 {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .beer-background-image {
-  background-image: url(../images/beer-card-image.jpg);
+  background-image: url(../images/beer-card-image-2.jpg);
   background-size: cover;
-  /* background-position: 0vw; */
+  background-position: 0vw;
   background-position: 50%;
 }
 
@@ -128,16 +83,14 @@ header nav ul li a:hover {
   margin-top: 10px;
 }
 
-header h1 {
-  font-family: "Ubuntu", sans-serif;
-}
+/* footer styles */
 footer {
   line-height: 2.2;
   padding: 20px;
   color: blue;
   font-weight: bold;
 }
-/* Style all font awesome icons */
+
 .fa {
   padding: 10px;
   font-size: 15px;
@@ -147,12 +100,9 @@ footer {
   text-decoration: none;
 }
 
-/* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.7;
 }
-
-/* Set a specific color for each brand */
 
 /* Facebook */
 .fa-facebook {
@@ -165,13 +115,15 @@ footer {
   background: #55acee;
   color: white;
 }
+
+/* Google */
 .fa-google {
   background: #dd4b39;
   color: white;
 }
+
+/* LinkedIn */
 .fa-linkedin {
   background: #007bb5;
   color: white;
 }
-
-/*comments*/

@@ -5,7 +5,7 @@ var breweriesContainerEl = document.querySelector("#breweries");
 var submitButtonEl = document.querySelector("#button");
 var searchHistoryContainerEl = document.querySelector("#recent-searches");
 
-// form handler function: needs to prevent default and run getEvents and getBreweries
+// form handler function: prevents default and run getEvents and getBreweries
 var formSubmitHandler = function (event) {
   event.preventDefault();
 
@@ -24,7 +24,7 @@ var formSubmitHandler = function (event) {
   loadCities();
 };
 
-// getEvents function: return info from Ticketmaster
+// getEvents function: returns info from Ticketmaster
 var getEvents = function (city) {
   var apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?size=5&apikey=4328UK6uESMfw57GtWI99vk5Gb15zK1Q&city=${city}`;
 
@@ -44,7 +44,7 @@ var getEvents = function (city) {
     });
 };
 
-// getBreweries: return info from Open Breweries
+// getBreweries: returns info from Open Breweries
 var getBreweries = function (city) {
   var apiUrl = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
 
@@ -73,12 +73,12 @@ var displayBreweries = function (data) {
     var breweryCard = document.createElement("div");
     breweryCard.setAttribute(
       "class",
-      "card m-3 has-background-link-dark beer-background-image"
+      "card m-2 has-background-link-dark beer-background-image"
     );
     var breweryCardTitle = document.createElement("h2");
     breweryCardTitle.setAttribute(
       "class",
-      "has-text-weight-semibold has-text-centered is-size-3 has-text-black pt-2"
+      "has-text-weight-semibold has-text-centered is-size-3 has-text-light pt-2"
     );
     breweryCardTitle.textContent = data[i].name;
 
@@ -87,10 +87,10 @@ var displayBreweries = function (data) {
 
     breweryCardStreet.textContent = `Address: ${data[i].street}`;
     breweryCardPostalCode.textContent = data[i].postal_code;
-    breweryCardStreet.setAttribute("class", "is-size-4 m-2 p-2 has-text-black");
+    breweryCardStreet.setAttribute("class", "is-size-4 m-2 p-2 has-text-light");
     breweryCardPostalCode.setAttribute(
       "class",
-      "is-size-4 m-2 p-2 has-text-black"
+      "is-size-4 m-2 p-2 has-text-light"
     );
 
     breweryCard.appendChild(breweryCardTitle);
@@ -147,8 +147,6 @@ var displayEvents = function (data) {
     eventCardStartDate.textContent = `Start date: ${data._embedded.events[i].dates.start.localDate}`;
     eventCardStartTime.textContent = `Start time: ${data._embedded.events[i].dates.start.localTime}`;
     eventCardImg.textContent = data._embedded.events[i].images[i].url;
-
-    //need to look at image ratio information for embedding in card
     eventCardUrl.href = data._embedded.events[i].url;
     eventCardUrl.target = "_blank";
     eventCardUrl.innerHTML = "For more details click here.";
@@ -164,13 +162,14 @@ var displayEvents = function (data) {
   }
 };
 
-// storeCities function: needs to save search history to local storage
+// storeCities function: saves search history to local storage
 var storeCities = function (city) {
   citiesArray = JSON.parse(localStorage.getItem("search-history")) || [];
   citiesArray.push(city);
   localStorage.setItem("search-history", JSON.stringify(citiesArray));
 };
 
+// loadCities function: loads search history to the page
 var loadCities = function () {
   var storedCities = JSON.parse(localStorage.getItem("search-history"));
 
