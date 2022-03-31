@@ -12,4 +12,7 @@ Link to GitHub repository: https://github.com/beatricekallen/beers-and-cheers
 
 <img width="1438" alt="Screen Shot 2022-03-30 at 2 47 15 PM" src="https://user-images.githubusercontent.com/98243455/160909414-c54ec4c0-5953-4d73-8487-17b435131406.png">
 
+https://user-images.githubusercontent.com/93412486/160956427-a59f27e0-bc5b-4701-919d-bb3663e44f8c.mp4
+
+
 Contributors: Aswathy Ajesh, Beatrice Allen, and Lauren Bryant
