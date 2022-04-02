@@ -4,6 +4,9 @@ var eventsContainerEl = document.querySelector("#events");
 var breweriesContainerEl = document.querySelector("#breweries");
 var submitButtonEl = document.querySelector("#button");
 var searchHistoryContainerEl = document.querySelector("#recent-searches");
+var modalWindowEl = document.querySelector("#modal-window");
+var modalWindowContentEl = document.querySelector("#modal-content");
+var modalCloseButtonEl = document.querySelector("#modal-close");
 
 // form handler function: prevents default and run getEvents and getBreweries
 var formSubmitHandler = function (event) {
@@ -14,7 +17,9 @@ var formSubmitHandler = function (event) {
   if (city) {
     cityInputEl.value = "";
   } else {
-    alert("Please enter a city name.");
+    modalWindowEl.setAttribute("class", "is-active");
+    modalWindowContentEl.textContent = "Please enter a city name.";
+    return;
   }
 
   getEvents(city);
@@ -36,11 +41,13 @@ var getEvents = function (city) {
           displayEvents(data);
         });
       } else {
-        alert("Error: City not found.");
+        modalWindowEl.setAttribute("class", "is-active");
+        modalWindowContentEl.textContent = "Error: City not found.";
       }
     })
     .catch(function (error) {
-      alert("Unable to connect to server.");
+      modalWindowEl.setAttribute("class", "is-active");
+      modalWindowContentEl.textContent = "Unable to connect to server.";
     });
 };
 
@@ -56,11 +63,13 @@ var getBreweries = function (city) {
           displayBreweries(data);
         });
       } else {
-        alert("Error: City not found.");
+        modalWindowEl.setAttribute("class", "is-active");
+        modalWindowContentEl.textContent = "Error: City not found.";
       }
     })
     .catch(function (error) {
-      alert("Unable to connect to server.");
+      modalWindowEl.setAttribute("class", "is-active");
+      modalWindowContentEl.textContent = "Unable to connect to server.";
     });
 };
 
@@ -190,6 +199,14 @@ var loadCities = function () {
 };
 
 $(document).ready(loadCities);
+
+// event listener to close modal windows
+var closeModal = function () {
+  modalWindowEl.removeAttribute("class", "is-active");
+  modalWindowEl.setAttribute("class", "hidden");
+};
+
+modalCloseButtonEl.addEventListener("click", closeModal);
 
 //event listener for submit form
 submitButtonEl.addEventListener("click", formSubmitHandler);

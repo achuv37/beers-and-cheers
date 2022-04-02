@@ -91,6 +91,15 @@ main h1 {
   margin-top: 10px;
 }
 
+/* modal styles */
+
+.modal {
+  height: 20vh;
+}
+.hidden {
+  display: none;
+}
+
 /* footer styles */
 footer {
   line-height: 2.2;
