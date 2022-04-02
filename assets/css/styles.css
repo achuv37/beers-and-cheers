@@ -51,6 +51,10 @@ header nav ul li a:hover {
 }
 
 /* hero section */
+.hero {
+  min-height: 48vh;
+}
+
 .hero-background-image {
   background-image: url(../images/hero-image.jpg);
   background-size: cover;
@@ -61,6 +65,10 @@ header nav ul li a:hover {
 }
 
 /* main section */
+main {
+  min-height: 50vh;
+}
+
 main h1 {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
