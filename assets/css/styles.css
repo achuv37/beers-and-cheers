@@ -59,6 +59,9 @@ header nav ul li a:hover {
   object-fit: none;
   object-position: 500px;
 }
+.hero {
+  min-height: 48 vh;
+}
 
 /* main section */
 main h1 {
