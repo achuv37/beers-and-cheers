@@ -14,7 +14,7 @@ Link to deployed application: https://achuv37.github.io/beers-and-cheers/
 Link to GitHub repository: https://github.com/achuv37/beers-and-cheers
 
 ## Insatll
-To install this project into your own, use git clone reponame in your command-line.
+To install this project into your own, use ` git clone reponame ` in your command-line.
 
 ## Images
 <img width="1438" alt="Screen Shot 2022-03-30 at 2 47 15 PM" src="https://user-images.githubusercontent.com/98243455/160909414-c54ec4c0-5953-4d73-8487-17b435131406.png">
